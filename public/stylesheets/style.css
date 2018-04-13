@@ -1,0 +1,259 @@
+body {
+  font-family: system-ui, -apple-ui, BlinkMacSystemFont, helvetica, sans-serif;
+  background-color: rgb(245,245,245);
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+:root {
+  --gray: rgb(180,180,180);
+}
+
+p {
+  margin: 0;
+}
+
+.grid {
+  /* max-width: 780px;
+  margin-left: auto;
+  margin-right: auto; */
+  position: relative;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: minmax(0px, 1fr) minmax(200px, 740px) minmax(0px, 1fr);
+}
+
+.profile {
+  background-color: white;
+  max-width: 100%;
+  width: 400px;
+  padding: 0 20px 20px 20px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: rgba(20,20,20, .1) 0 1px 3px;
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+
+.follower-count {
+  font-weight: 600;
+  color: white;
+  font-size: 25px;
+  margin-top: -25px;
+  list-style: none;
+  text-align: right;
+  padding-right: 20px;
+  margin-bottom: 0;
+}
+
+.inner-grid {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+@media(max-width: 800px) {
+  .inner-grid {
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
+  
+  .follower-count {
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-top: -50px;
+  object-fit: cover;
+  border: white solid 6px;
+  margin-bottom: 10px;
+}
+
+
+svg {
+  width: 28px;
+  height: auto;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+
+.media-container {
+  margin-bottom: 20px;
+  grid-column: 2 / 3;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(20,20,20, .1) 0 1px 3px;
+}
+
+.media-container img {
+  border-radius: 5px;
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+.full-width-bg {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: rgb(40,40,40);
+  display: grid;
+  grid-template-columns: minmax(0px, 1fr) minmax(200px, 740px) minmax(0px, 1fr);
+}
+
+.media-container p {
+  margin-bottom: 5px;
+  padding: 7px 0 0 8px;
+  border-top: solid 1px rgb(220,220,220);
+  display: inline-block;
+}
+
+.media-buttons {
+  display: flex;
+  margin-top: 10px;
+}
+
+.media-buttons button:first-of-type {
+  margin-left: auto
+}
+
+.menu-bar {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.menu-inner {
+  max-width: 740px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-item {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  display: flex;
+}
+
+.mail {
+  width: 45px;
+}
+
+.home {
+  width: 30px;
+}
+
+.follow {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  display: block;
+  background-image: linear-gradient(to left, #d33f8d, #0350c6);
+  color: white;
+  border: currentColor solid 2px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 10px 15px;
+  display: none;
+}
+
+.follow span {
+  font-weight: 400;
+  font-size: 19px
+}
+
+.tip {
+  background-image: linear-gradient(to left, #d33f8d, #0350c6);
+  color: white;
+  border: currentColor solid 2px;
+  font-size: 20px;
+  font-weight: 800;
+  border-radius: 5px;
+  padding: 8px 20px;
+  top: 65px;
+  position: sticky;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(100% - 20px);
+  max-width: 220px;
+}
+
+.tip-container {
+  grid-column: 3 / 4;
+  grid-row: 1 / 4;
+  text-align: center;
+}
+
+.tags {
+  grid-column: 1 / 2;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: right;
+  
+}
+
+.tags button {
+  background-color: #0350c6;
+  border-radius: 4px;
+  color: white;
+  display: inline-block;
+  padding: 5px 8px;
+  margin-top: 10px;
+}
+
+.more {
+  grid-column: 2 / 3;
+  background-color: #272727;
+  color: white;
+  padding: 12px;
+  width: 400px;
+  max-width: 100%;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+@media(max-width: 1000px) {
+  .hide-mobile {
+    display: none;
+  }
+}
